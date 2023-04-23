@@ -54,7 +54,8 @@ if len(sys.argv) > 1:
         exit()
 if path[-1] not in ['\\', '/']:
     path = path + '\\'
-print(path)
+print()
+print('Analyzing:', path)
 
 my_list = []
 for directory in os.listdir(path):
@@ -65,6 +66,9 @@ for directory in os.listdir(path):
             print('.', end='')
 
 print('\n')
+if len(my_list) > 0:
+    print(f'Found {len(my_list)} paths greater than 1 Gb:\n')
 my_list.sort(reverse=True)
 for item in my_list:
     print(item[0], '\tGb', item[1])
+print('\nFinished!\n')
