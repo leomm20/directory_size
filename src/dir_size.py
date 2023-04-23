@@ -44,7 +44,7 @@ def get_dir_size(path_to_search='.', size_in='bytes'):
 #         return get_dir_size(path)
 
 
-path = r'C:'
+path = r'C:\Program Files'
 
 if len(sys.argv) > 1:
     if os.path.exists(sys.argv[1]):
